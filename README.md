@@ -1,4 +1,4 @@
-![](http://p1.pichost.me/i/21/1445115.png)
+![](https://raw.githubusercontent.com/hemanth/haskell-rascal/master/imgs/swahili.png)
 
 > Learning Haskell with a rascal!
 
