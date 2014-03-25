@@ -8,7 +8,7 @@ First of all, let me define rascal:
 
 > a mischievous or cheeky person, especially a child or man (typically used in an affectionate way). "a lovable rascal"
 
-Ok, now that you know what rascal means, let learn some haskell?
+Ok, now that you know what rascal means, let's learn some haskell!
 
 >Haskell is an advanced purely-functional programming language. An open-source product of more than twenty years of cutting-edge research, it allows rapid development of robust, concise, correct software. With strong support for integration with other languages, built-in concurrency and parallelism, debuggers, profilers, rich libraries and an active community, Haskell makes it easier to produce flexible, maintainable, high-quality software. 
 
@@ -22,7 +22,7 @@ This repo will remains W.I.P as a rascal learns haskell by teaching it!
 
 __Installation:__
 
-Easy way is to hit [hakell-platfrom](http://www.haskell.org/platform/), download the required binary, install it! 
+Easy way is to hit [haskell-platfrom](http://www.haskell.org/platform/), download the required binary, install it! 
 
 P.S: If want to build from source paw [here](https://ghc.haskell.org/trac/ghc/wiki/Building/GettingTheSources)
 
