@@ -41,3 +41,33 @@ haskell-rascal>
 Now you are all set to do some haskell with a rascal!
 
 ---
+
+# Defining Haskell in a line
+
+"It's a pure functional programming language which is statically typed and lazily evaluated!"
+
+Let's break it down.
+
+__Pure functions:__ 
+
+Pure implies idempotency and functional programming is a one in which functions are first-class. 
+
+__Statically typed:__
+
+A programming language is said to use static typing when type checking is performed during compile-time as opposed to run-time. 
+
+__Lazy evaluation:__
+
+Lazy evaluation is an evaluation strategy which delays the evaluation of an expression until its value is needed and which also avoids repeated evaluations.
+
+# Abstract syntactic and semantic structure.
+
+* Set of modules make a Haskell program at the top most level.
+
+* The top level of a module consists of a collection of declarations.
+
+* The the next lower level are expressions.
+
+* The bottom level is Haskell 's lexical structure.
+
+We shall paw at each of them as we move on the next units of Haskell.
