@@ -71,3 +71,35 @@ Lazy evaluation is an evaluation strategy which delays the evaluation of an expr
 * The bottom level is Haskell 's lexical structure.
 
 We shall paw at each of them as we move on the next units of Haskell.
+
+# Simple Arithmetic and Boolean Algebra
+
+![](/http://upload.wikimedia.org/wikipedia/commons/d/d8/Bring_radicals_cartoon.PNG)
+
+REPL is your friend :)
+
+```
+haskell-rascal> 0/0
+NaN
+haskell-rascal> 1/0
+Infinity
+haskell-rascal> 22 / 7
+3.142857142857143
+haskell-rascal> pi
+3.141592653589793
+haskell-rascal> ( 43 * 1 ) - 1
+42
+```
+
+`&&` => boolean and `||` => boolean or. `not` => negatation
+
+```
+haskell-rascal> not True 
+False
+haskell-rascal> True || False
+True
+haskell-rascal> True && ( False && True )
+False
+haskell-rascal> not (True && ( False && True ))
+True
+```
