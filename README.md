@@ -103,3 +103,21 @@ False
 haskell-rascal> not (True && ( False && True ))
 True
 ```
+
+# Types and Type-classes
+
+`:type` aka `:t` is at your help.
+
+```
+haskell-rascal> :type True
+True :: Bool
+haskell-rascal> :t 1
+1 :: Num a => a
+haskell-rascal> :t 'H'
+'H' :: Char
+haskell-rascal> :t "H"
+"H" :: [Char]
+haskell-rascal> :t []
+[] :: [a]
+```
+
