@@ -121,3 +121,39 @@ haskell-rascal> :t []
 [] :: [a]
 ```
 
+# Lists and tuples
+
+Lists are a **homogenous** data structure, i.e it stores several elements of the same type.
+
+Let's see few examples:
+
+```
+haskell-rascal> ["hemanth",1,2]
+
+<interactive>:5:12:
+    No instance for (Num [Char]) arising from the literal `1'
+    Possible fix: add an instance declaration for (Num [Char])
+    In the expression: 1
+    In the expression: ["hemanth", 1, 2]
+    In an equation for `it': it = ["hemanth", 1, 2]
+    
+haskell-rascal> ["hemanth",'h']
+
+<interactive>:7:12:
+    Couldn't match expected type `[Char]' with actual type `Char'
+    In the expression: 'h'
+    In the expression: ["hemanth", 'h']
+    In an equation for `it': it = ["hemanth", 'h']
+
+haskell-rascal> ['h','e']
+"he"
+
+haskell-rascal> [1,2,3]
+[1,2,3]
+
+haskell-rascal> "heman" == ['h','m','a','n']
+False
+
+haskell-rascal> "he" == ['h','e']
+True
+```
