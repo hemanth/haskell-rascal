@@ -120,6 +120,7 @@ haskell-rascal> :t "H"
 haskell-rascal> :t []
 [] :: [a]
 ```
+---
 
 # Lists and tuples
 
@@ -157,3 +158,40 @@ False
 haskell-rascal> "he" == ['h','e']
 True
 ```
+---
+
+__List functions:__
+
+List processing:
+  * (:) (list constructor)
+  * ++
+  * head
+  * last
+  * tail
+  * init
+  * length
+  * !! (list index)
+
+Arithmetic Operations:
+  * div
+  * mod
+  * gcd
+  * lcm
+  * even
+  * odd
+  * sum
+  * product
+
+Extended list processing:
+  * maximum
+  * minimum
+  * reverse
+  * elem
+  * notElem
+  * concat
+  * take
+  * drop
+  * takeWhile
+  * dropWhile
+  * words
+  * unwords
