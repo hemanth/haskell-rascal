@@ -195,3 +195,68 @@ Extended list processing:
   * dropWhile
   * words
   * unwords
+  
+  ---
+  
+  ```
+haskell-rascal> let nums = [1,3,3,7]
+
+haskell-rascal> length nums
+4
+
+haskell-rascal> reverse nums
+[7,3,3,1]
+
+haskell-rascal> head nums
+1
+
+haskell-rascal> last nums
+7
+
+haskell-rascal> last nums
+7
+
+haskell-rascal> init nums
+[1,3,3]
+
+haskell-rascal> nums !! 3 -- Get the element at the given index.
+7
+
+haskell-rascal> minimum nums
+1
+
+haskell-rascal> maximum nums 
+7
+
+haskell-rascal> 0 : nums
+[0,1,3,3,7]
+
+haskell-rascal> nums ++ [-1]
+[1,3,3,7,-1]
+
+haskell-rascal> [1,3] ++ [3,7] 
+[1,3,3,7]  
+
+haskell-rascal> take 3 nums
+[1,3,3]
+
+haskell-rascal> drop 1 nums
+[3,3,7]
+
+haskell-rascal> sum nums
+14
+
+haskell-rascal> product nums
+63
+
+haskell-rascal> 7 `elem` nums
+True
+
+haskell-rascal> 0 `elem` nums
+False
+
+haskell-rascal> ['a'..'z']
+"abcdefghijklmnopqrstuvwxyz"
+
+```
+  
