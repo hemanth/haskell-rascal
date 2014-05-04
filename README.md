@@ -198,7 +198,7 @@ Extended list processing:
   
   ---
   
-  ```
+```
 haskell-rascal> let nums = [1,3,3,7]
 
 haskell-rascal> length nums
@@ -257,6 +257,5 @@ False
 
 haskell-rascal> ['a'..'z']
 "abcdefghijklmnopqrstuvwxyz"
-
 ```
   
