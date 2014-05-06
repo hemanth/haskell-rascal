@@ -213,9 +213,6 @@ haskell-rascal> head nums
 haskell-rascal> last nums
 7
 
-haskell-rascal> last nums
-7
-
 haskell-rascal> init nums
 [1,3,3]
 
@@ -257,5 +254,21 @@ False
 
 haskell-rascal> ['a'..'z']
 "abcdefghijklmnopqrstuvwxyz"
+
+haskell-rascal> words "May the force be with you"
+["May","the","force","be","with","you"]
+
+haskell-rascal> unwords ["haskell","-","rascal"]
+"haskell - rascal"
+
+haskell-rascal> takeWhile (<=7) [1..10]
+[1,2,3,4,5,6,7]
+
+haskell-rascal> dropWhile (<=7) [1..10]
+[8,9,10]
+
+
+
+
 ```
   
