@@ -195,9 +195,7 @@ Extended list processing:
   * dropWhile
   * words
   * unwords
-  
-  ---
-  
+   
 ```
 haskell-rascal> let nums = [1,3,3,7]
 
@@ -267,8 +265,26 @@ haskell-rascal> takeWhile (<=7) [1..10]
 haskell-rascal> dropWhile (<=7) [1..10]
 [8,9,10]
 
+```
+---
 
+Tuples unlike lists have a __fixed__ number of elements (immutable) and are heterogenous data structures. 
 
+__Example:__
 
 ```
-  
+haskell-rascal> let co-ordinates = (70.1,80.1,"L33t Area")
+```
+__Tuple functions:__
+
+* fst
+* snd
+* curry
+* uncurry 
+* swap 
+
+
+
+
+
+
