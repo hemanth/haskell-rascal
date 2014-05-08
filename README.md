@@ -275,6 +275,7 @@ __Example:__
 ```
 haskell-rascal> let co-ordinates = (70.1,80.1,"L33t Area")
 ```
+
 __Tuple functions:__
 
 * fst
@@ -282,6 +283,20 @@ __Tuple functions:__
 * curry
 * uncurry 
 * swap 
+
+```
+haskell-rascal> fst (True,"1")
+True
+
+haskell-rascal> snd (True,"1")
+"1"
+
+haskell-rascal> zip "leet" [1,3,3,7]
+[('l',1),('e',3),('e',3),('t',7)]
+
+haskell-rascal> unzip [('l',1),('e',3),('e',3),('t',7)]
+("leet",[1,3,3,7])
+```
 
 
 
