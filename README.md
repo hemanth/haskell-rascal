@@ -297,6 +297,26 @@ haskell-rascal> zip "leet" [1,3,3,7]
 haskell-rascal> unzip [('l',1),('e',3),('e',3),('t',7)]
 ("leet",[1,3,3,7])
 ```
+---
+
+#Functions!
+
+Before we dive into functions, it's worth to know the below:
+
+```
+-- By default:
+f g h x <=> (((f g) h) x)
+
+-- $ replace parenthesis.
+f g $ h x       <=>   f g (h x) ⇔ (f g) (h x)
+f $ g h x       <=>   f (g h x) ⇔ f ((g h) x)
+f $ g $ h x     <=>   f (g (h x))
+
+-- (.) composition.
+(f . g) x       <=>   f (g x)
+(f . g . h) x   <=>   f (g (h x))
+```
+
 
 
 
