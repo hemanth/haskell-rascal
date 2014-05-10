@@ -317,8 +317,14 @@ f $ g $ h x     <=>   f (g (h x))
 (f . g . h) x   <=>   f (g (h x))
 ```
 
+Let's take a `fib` function as an example and try to understand function!
 
+```
+haskell-rascal> let fib = map fst (iterate f (0,1)) where f (x,y) = (y,x+y))
 
+haskell-rascal> take 10 fib
+[0,1,1,2,3,5,8,13,21,34]
+```
 
 
 
