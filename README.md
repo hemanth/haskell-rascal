@@ -37,6 +37,9 @@ Loading package base ... linking ... done.
 Prelude> :set prompt "haskell-rascal> "
 haskell-rascal> 
 ```
+P.S: You can as well add `:set prompt "haskell-racal> "` to your `~/.ghci` file.
+
+If you want to try it online, you must looks at [ghc.io](ghc.io) or [codeworld](http://codeworld.info/)
 
 Now you are all set to do some haskell with a rascal!
 
@@ -320,12 +323,74 @@ f $ g $ h x     <=>   f (g (h x))
 Let's take a `fib` function as an example and try to understand function!
 
 ```
-haskell-rascal> let fib = map fst (iterate f (0,1)) where f (x,y) = (y,x+y))
+haskell-rascal> let fib = 0 : 1 : zipWith (+) fib (tail fib)
 
 haskell-rascal> take 10 fib
 [0,1,1,2,3,5,8,13,21,34]
 ```
 
+Before we procede further understanding the fib function, we must understand what [Thunks](http://en.wikipedia.org/wiki/Thunk_%28functional_programming%29)
+are.
+
+In most of the programming langauges that supports tuples, saying `(4+2,7)` would be stored as `(6,7)` but in Haskell it gets stored as `(_,7)` where the `_` is the thunk value.
+
+Lets explore the same in ghci:
+
+```haskell
+haskell-rascal> let x = (4+2,7)
+
+haskell-rascal> :print x
+x = ((_t1::Integer),7)
+```
+
+Notice that `_t1` is the thunk value here, now if we fetch the second element of that tuple, it will be 7, but the first element we **not** be evaluated yet!
+
+```haskell
+haskell-racal> snd x
+7
+
+haskell-racal> :print x
+x = ((_t2::Integer),7)
+```
+
+But as soon as we fetch the first or just evaluate `x`, the first value will be evaluated.
+
+```
+haskell-racal> fst x
+6
+
+haskell-racal> x
+(6,7)
+```
+
+So, a thunk is basically a value that has not yet been computed yet. 
+As per the need it can evaluate or partly-evaluated to a real value.
+Partial evaluation of a thunk will resulting in a value with more thunks in it.
+
+Now the above function can be expanded as:
+
+```haskell
+fibs                        = 0 : 1 : <thunk>
+tail fib                    = 1 : <thunk>
+zipWith (+) fib (tail fib)  = <thunk>
+```
+
+The first row left shifted is the second row and the third row is the sum of 
+the first and the second rows and all of them are **sharing** the same thunk.
+
+`take 2 fibs` will give use `[0, 1]` which is direct and does not need further evaluation.
+
+Now if we say `take 3 fib` Haskell will directly get the 0 and 1, and then it will have to partly evaluate the thunk, so that it can fully evaluate `zipWith (+) fib (tail fib)`, by getting the sum of the first two rows but it can't fully do that, it can begin to sum the first two rows:
+
+```haskell
+fibs                         = 0 : 1 : 1: <thunk>
+tail fibs                    = 1 : 1 : <thunk>
+zipWith (+) fibs (tail fibs) = 1 : <thunk>
+```
+
+Likewise it keeps on going creating `<thunk's>` and eval them as and when the need arrives.
+
+P.S: If you says `fib n` and then `fib n-m` where `m<=n` the expresion will not be re-evaled but will just take the first `n-m` numbers from the list it has already evaled!
 
 
 
