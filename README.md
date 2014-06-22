@@ -393,4 +393,17 @@ Likewise it keeps on going creating `<thunk's>` and eval them as and when the ne
 P.S: If you says `fib n` and then `fib n-m` where `m<=n` the expresion will not be re-evaled but will just take the first `n-m` numbers from the list it has already evaled!
 
 
+Now that we could eat and digest thunks, let start with simple functions ;)
 
+```haskell
+haskell-rascal> let square n = n * n;
+haskell-rascal> square 3
+9
+```
+
+```haskell
+haskell-rascal> :t square
+square :: Num a => a -> a
+```
+
+^ Is the signature of a function.
