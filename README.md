@@ -407,3 +407,28 @@ square :: Num a => a -> a
 ```
 
 ^ Is the signature of a function.
+
+Wondering what does `square :: Num a => a -> a` means?
+
+Let us see few more example of the functions we have used already:
+
+```haskell
+haskell-rascal> :t fst
+fst :: (a, b) -> a
+
+haskell-rascal> :t snd
+snd :: (a, b) -> b
+
+haskell-rascal> :t map
+map :: (a -> b) -> [a] -> [b]
+```
+
+The combination of :: and the type after it is called a type signature. Say we did a `:t "haskell"` we would get `"haskell" :: [Char]` in this case it's indicating that `"haskell"` is of `[Char]` type.
+
+Generalising: x :: y  => "the expression x has the type y".
+
+
+
+
+
+
