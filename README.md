@@ -428,6 +428,19 @@ The combination of :: and the type after it is called a type signature. Say we d
 Generalising: x :: y  => "the expression x has the type y".
 
 
+__Recurison:__
+
+[https://encrypted.google.com/search?hl=en&q=recursion](Recursion) simply defined: A function invoking itself for a finite number of times before returning the result of computation. 
+
+As we had noticed in the above example of `fibs` here is a simple example of `factorial`
+
+```haskell
+haskell-rascal> let factorial n = if n > 0 then n * factorial (n-1) else 1
+
+haskell-rascal> factorial (10)
+3628800
+```
+
 
 
 
