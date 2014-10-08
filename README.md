@@ -77,7 +77,7 @@ We shall paw at each of them as we move on the next units of Haskell.
 
 # Simple Arithmetic and Boolean Algebra
 
-![](/http://upload.wikimedia.org/wikipedia/commons/d/d8/Bring_radicals_cartoon.PNG)
+![](http://upload.wikimedia.org/wikipedia/commons/d/d8/Bring_radicals_cartoon.PNG)
 
 REPL is your friend :)
 
