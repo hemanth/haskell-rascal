@@ -441,6 +441,32 @@ haskell-rascal> factorial (10)
 3628800
 ```
 
+__λ abstraction A.K.A Anonymous function:__
+
+Function without a name?! 
+
+How would I call it?
+
+Let's see a simple example to understand how they work and why are they important. 
+
+```haskell
+haskell-rascal> let list = [0..4]
+haskell-rascal> let odds x = x + 1 
+haskell-rascal> map odds list
+[1,2,3,4,5]
+```
+
+The above steps adds `1` to every element to the list, that's why the function is named `odds`, but why must even bother creating a function, naming it, after all it's just by map?
+
+Wouldn't be useful if we could condense them all to one single line!?
+
+Yes, that's where lamda abstractions are very useful, so with the help of it, we can rewrite the above code as below and yet get the same effect.
+
+```haskell
+haskell-rascal> map (\x->x+1) list 
+[1,2,3,4,5]
+```
+
 
 
 
