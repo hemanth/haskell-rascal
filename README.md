@@ -481,3 +481,12 @@ As a matter of fact, `currying` was of the gifts from [Haskell Brooks Curry
 ](http://en.wikipedia.org/wiki/Haskell_Curry) while the initial concept of combinatory logic was based on a single paper by `Moses Schönfinkel`, much of the development was done by Curry.
 
 
+__Example:__
+
+```haskell
+haskell-rascal> let add n1 n2 = n1 + n2
+
+haskell-rascal> add 2 3
+
+haskell-rascal> (add 2) 3
+```
