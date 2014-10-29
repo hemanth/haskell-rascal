@@ -467,7 +467,17 @@ haskell-rascal> map (\x->x+1) list
 [1,2,3,4,5]
 ```
 
+__Curring!__
 
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBSYQprd6BTkERQcBQeQ45vGDalsAcneivFH-cYfnBnVUGZ5BA)
 
+No, this has nothing to do with the above curry ;)
+
+Currying here is the process of transforming a function which accepts multiple arguments into a function that takes just accepts a single argument and returns another function if any arguments are still needed.
+
+`f :: a -> b -> c` curried -> `g :: (a, b) -> c` 
+
+As a matter of fact, `currying` was of the gifts from [Haskell Brooks Curry
+](http://en.wikipedia.org/wiki/Haskell_Curry) while the initial concept of combinatory logic was based on a single paper by `Moses Schönfinkel`, much of the development was done by Curry.
 
 
