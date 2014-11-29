@@ -490,3 +490,24 @@ haskell-rascal> add 2 3
 
 haskell-rascal> (add 2) 3
 ```
+
+__Function composition:__
+
+Function composition is a mechanism of combining two or more functions to a single function.
+
+The closest analogy to this would be pipes in shells piping.
+
+```sh
+cat fubar.txt | sort -n | less
+```
+Here the output of `cat` is feed to `sort` and it's output is feed to `less`.
+
+In Mathametical terms: `(f ◦ g)(x) = f (g(x))`
+
+__Example:__
+
+```haskell
+haskell-rascal> let last = head . reverse
+haskell-rascal> last [1,2,42]
+42
+```
