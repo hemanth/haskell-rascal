@@ -302,7 +302,7 @@ haskell-rascal> unzip [('l',1),('e',3),('e',3),('t',7)]
 ```
 ---
 
-#Functions!
+# Functions!
 
 Before we dive into functions, it's worth to know the below:
 
